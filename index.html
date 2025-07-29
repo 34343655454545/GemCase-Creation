@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GemCase Creations</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(
+        to right,
+        #ffcc80, 
+        #f99ac8, 
+        #ff7fbf, 
+        #ff8f87, 
+        #ff7a6e
+      );
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 10px 20px;
+      display: flex; 
+      align-items: center;
+    }
+    header h1 {
+      margin-left: 10px;
+      color: #ff69b4;
+    }
+    .logo {
+      width: 50px; 
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      border: 2px solid #ff69b4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ff69b4;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+      gap: 15px;
+    }
+    .item {
+      background: white;
+      border: 2px solid #ff69b4;
+      border-radius: 10px;
+      height: 120px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      color: #ff69b4;
+      font-weight: bold;
+    }
+    form {
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #ff69b4;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .confirmation {
+      margin-top: 20px;
+      background-color: #e6ffe6;
+      padding: 15px;
+      border-left: 5px solid green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">GC</div>
+    <h1>GemCase Creations</h1>
+  </header>
+
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+      <div class="item">Item 11</div>
+      <div class="item">Item 12</div>
+      <div class="item">Item 13</div>
+      <div class="item">Item 14</div>
+      <div class="item">Item 15</div>
+      <div class="item">Item 16</div>
+      <div class="item">Item 17</div>
+      <div class="item">Item 18</div>
+      <div class="item">Item 19</div>
+      <div class="item">Item 20</div>
+    </div>
+
+    <form id="orderForm">
+      <h2>Place Your Order</h2>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" required />
+
+      <label for="address">Your Address:</label>
+      <input type="text" id="address" required />
+
+      <label for="order">What would you like to order?</label>
+      <textarea id="order" rows="4" required placeholder="[ write the item names in this box ]"></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <div class="confirmation" id="confirmationMsg">
+      ✅ Order received! Please screenshot this and send it to us on WhatsApp.<br><br>
+      <strong>WhatsApp:</strong> 204-698-5321
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    const confirmation = document.getElementById('confirmationMsg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      confirmation.style.display = 'block';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
